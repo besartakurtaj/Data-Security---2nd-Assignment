@@ -15,13 +15,11 @@ private static void decrypt(char[][] plot, String encryptedText) {
         int cursor = 0;
         for (int i = 0; i < pEncryptText.length; i++) {
             pEncryptText[i] = "" + encryptedText.charAt(cursor) + encryptedText.charAt(cursor + 1);
-            // step by two
             cursor = cursor + 2;
         }
 
         System.out.println("Pairs: " + Arrays.toString(pEncryptText));
 
-        // O(nk)
         for (int i = 0; i < pEncryptText.length; i++) {
             int column_a = 0;
             int row_a = 0;
