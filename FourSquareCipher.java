@@ -129,6 +129,30 @@ private static void decrypt(char[][] plot, String encryptedText) {
             cursor++;
         }
     }
+     /**
+     * @param string string to remove duplicates
+     * @return filtered string
+     */
+    private static String removeDuplicates(String string) {
+        char[] characters = string.toCharArray();
+        String filterd = "";
+        for (int i = 0; i < characters.length; i++) {
+            // iterate each char on the list
+            boolean isReapeated = false;
+            for (int j = 0; j < i; j++) {
+                // compare one char (current) to all chars
+                if(characters[i] == characters[j]) {
+                    isReapeated = true;
+                    break;
+                }
+            }
+
+            if(!isReapeated) { // if the char is not repeated then add to output
+                filterd += characters[i];
+            }
+        }
+        return filterd; // sample input: LOLEEOEO, output: LEO
+    }
     
     
 }
