@@ -113,6 +113,22 @@ private static void decrypt(char[][] plot, String encryptedText) {
         System.out.println("Encrypted Text: " + encryptedText);
     }
     
+     /**
+     * @param plot = plot array max length 25
+     * @param remove = char to remove
+     */
+    private static void plotAlphabets(char[] plot, char remove) {
+        int cursor = 0;
+        for (int i = 0; i < plot.length; i++) {
+            if ((char) ('A' + i) != remove) {
+                plot[i] = (char) ('A' + cursor);
+            } else {
+                cursor++;
+                plot[i] = (char) ('A' + cursor);
+            }
+            cursor++;
+        }
+    }
     
     
 }
