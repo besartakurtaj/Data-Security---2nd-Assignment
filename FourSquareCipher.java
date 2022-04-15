@@ -1,8 +1,11 @@
+import java.util.Arrays;
+import java.util.Scanner;
+
 public class FourSquareCipher {
     public static void main(String[] args) {
     
     }
-} 
+
 
 private static void decrypt(char[][] plot, String encryptedText) {
         char[] pairs = new char[2];
@@ -54,3 +57,6 @@ private static void decrypt(char[][] plot, String encryptedText) {
         // show the encrypted text
         System.out.println("Decrypted Text: " + plainText);
     }
+    
+    
+}
