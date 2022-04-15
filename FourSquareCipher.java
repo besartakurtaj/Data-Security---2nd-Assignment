@@ -26,33 +26,25 @@ private static void decrypt(char[][] plot, String encryptedText) {
             int column_b = 0;
             int row_b = 0;
 
-            // get the pairs
             pairs[0] = pEncryptText[i].charAt(0);
             pairs[1] = pEncryptText[i].charAt(1);
 
-            // find the pairs on key plot 1 NormalAlphabets
             for (int j = 0; j < plot[0].length; j++) {
-                // find the first pair to from the normal alphabets
                 if(pairs[0] == plot[1][j]) {
-                    // the plot is 5 by 25 and we need to find the row, we can convert it to 5x5 (divide 5)
                     row_a = (j / 5) * 5;
-                    // to find the column we need to see the remainder, we (mod) it by 5 (j % 5)
                     column_a = j % 5;
                 }
 
-                // find the second pair to from the normal alphabets
                 if(pairs[1] == plot[2][j]) {
                     row_b = (j / 5) * 5;
                     column_b = j % 5;
                 }
             }
 
-            // we need to reverse the column and the row in the two key plot (ciphered plot)
             plainText += plot[0][row_a + column_b]; // find in the key plot 1 Q1
             plainText += plot[0][row_b + column_a];  // find in the key plot 2 Q4
         }
 
-        // show the encrypted text
         System.out.println("Decrypted Text: " + plainText);
     }
     
