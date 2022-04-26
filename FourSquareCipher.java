@@ -1,7 +1,7 @@
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class Main {
+public class FourSquareCipher {
 
     public static void main(String[] args) {
         char[][] plot = new char[3][25];
@@ -76,11 +76,6 @@ public class Main {
             // Decrypt
             decrypt(plot, encryptedText);
         }
-    }
-
-public class FourSquareCipher {
-    public static void main(String[] args) {
-    
     }
 
 
@@ -219,7 +214,7 @@ private static void decrypt(char[][] plot, String encryptedText) {
     }
     
     
-}
+
 /**
      * Time Complexity O(n log n)
      * @param plot = plot array max length 25
@@ -263,5 +258,6 @@ private static void decrypt(char[][] plot, String encryptedText) {
 
         }
     }
+}
 
 
